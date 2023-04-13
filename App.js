@@ -7,6 +7,7 @@ import VerifyEmailScreen from './components/VerifyEmailScreen';
 import {firebase} from './firebase';
 import Dashboard from './components/Dashboard';
 import Header from './components/Header';
+import WaitingScreen from './components/WaitingScreen';
 
 const Stack = createStackNavigator();
 
@@ -74,7 +75,38 @@ return(
       }
     }}
   />
+  <Stack.Screen 
+    name="VerifyEmailScreen"
+    component={VerifyEmailScreen}
+    options={{
+      headerTitle:()=><Header name='VerifyEmailScreen'/> ,
+      headerStyle:{
+        height:150,
+        borderBottomLeftRadius:50,
+        borderBottomRightRadius:50,
+        elevation:25
+      }
+    }}>
+
+    </Stack.Screen>
+
+    <Stack.Screen 
+    name="WaitingScreen"
+    component={WaitingScreen}
+    options={{
+      headerTitle:()=><Header name='WaitingScreen'/> ,
+      headerStyle:{
+        height:150,
+        borderBottomLeftRadius:50,
+        borderBottomRightRadius:50,
+        elevation:25
+      }
+    }}>
+
+    </Stack.Screen>
 </Stack.Navigator>
+
+
 
 );
 

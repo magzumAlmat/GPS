@@ -51,7 +51,6 @@ const Login = () => {
       <TouchableOpacity
       style={styles.button}
       onPress={()=>navigation.navigate('Registration')} 
-      
     >
       <Text style={{fontWeight:'bold',fontSize:22}} > Registration</Text>
 
